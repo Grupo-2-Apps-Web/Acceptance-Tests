@@ -4,7 +4,8 @@ Scenario: Visualización de NavBar y Footer
 
 Given el <usuario> desea conocer sobre la aplicación
 When ingresa al Landing Page
-Then se mostrará el Navbar y el Footer que permitirán al usuario navegar de forma sencilla.
+Then se mostrará la <pagina> de Inicio, 
+donde se mostrará el <navbar> y el <footer> que permitirán al <usuario> navegar de forma sencilla.
 
 Examples: INPUT
     | usuario            |
