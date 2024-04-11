@@ -4,14 +4,14 @@ Scenario: Visualización de página de inicio
 
 Given el <usuario> desea conocer sobre la aplicación
 When ingresa al Landing Page
-Then se mostrará la <página> de Inicio,
-donde se mostrará sencilla y que comprende la idea principal.
+Then se mostrará la <pagina> de inicio sencilla que comprende la <idea principal>.
 
-Examples:
-    | usuario            |
-    | Usuario nuevo      |
-    | Usuario recurrente |
+Examples: INPUT
+
+    | usuario       |
+    | Luis Sanchez  |
 
 Examples: OUTPUT
-    | diseño     | contenido                                             |
-    | agradable  | Presentación clara de la idea principal de la app     |
+
+    | pagina  | idea principal                                  |
+    | Inicio  | Carrying your cargo into the future...          |
