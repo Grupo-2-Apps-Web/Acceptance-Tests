@@ -1,4 +1,4 @@
-Feature: Búsqueda de envíos ordenados
+Feature: US08 Búsqueda de envíos ordenados
     Como cliente de empresa logística 
     quiero poder filtrar mis envíos anteriores mediante criterios de búsqueda 
     para encontrar la información que necesito
@@ -12,11 +12,11 @@ When ingrese <texto> en la barra de búsqueda
 Then la plataforma muestra una <lista de todos los envios> realizados con la coincidencia de nombre
 
 Examples: INPUT
-    | Cliente          | texto |
+    | Cliente          | texto  |
     | Alberto Valverde | #MA251 |
 
 Examples: OUTPUT
-    | lista de todos los envios                    |
+    | lista de todos los envios                                                                                       |
     | Viaje #MA251 ID: 1 LOAD DATE:...... LOAD LOCATION:..... VIAJE #MA252 ID: 2 LOAD DATE:..... LOAD LOCATION:.....  |
 
 Scenario: Búsqueda por fecha
@@ -31,7 +31,7 @@ Examples: INPUT
     | Alberto Valverde |
 
 Examples: OUTPUT
-    | lista de todos los envios                    |
+    | lista de todos los envios                                                                                       |
     | Viaje #MA251 ID: 1 LOAD DATE:...... LOAD LOCATION:..... VIAJE #MA252 ID: 2 LOAD DATE:..... LOAD LOCATION:.....  |
 
 
@@ -47,6 +47,6 @@ Examples: INPUT
     | Alberto Valverde |
 
 Examples: OUTPUT
-    | lista de todos los envios                    |
+    | lista de todos los envios                                                                                       |
     | Viaje #MA251 ID: 1 LOAD DATE:...... LOAD LOCATION:..... VIAJE #MA252 ID: 2 LOAD DATE:..... LOAD LOCATION:.....  |
 
