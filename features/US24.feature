@@ -1,19 +1,23 @@
-Feature: US24 Sección Sobre Nosotros
+Feature: US24 Sección de Contacto
+    Como usuario
+    quiero acceder a una página “Contacto” para conocer los medios de contacto con la empresa
+    para realizar preguntas sobre dudas, problemas o sugerencias.
 
-Scenario: Visualización de página Sobre Nosotros
+Scenario: Visualización de página de Contacto
 
-Given el <usuario> desea conocer sobre la empresa
-When ingresa al Landing Page
-And ingresa a la sección Sobre Nosotros
-Then se mostrará la <pagina> Sobre Nosotros,
-donde se muestra <informacion> sobre la startup, su misión y visión.
+    Given que el <usuario> desea contactar con el área de soporte de la startup
+    When ingresa al Landing Page
+    And selecciona la sección Contacto
+    Then se mostrará la <pagina> de Contacto,
+    donde se muestran los <medios de contacto> que el <usuario> puede utilizar para realizar consultas.
 
 Examples: INPUT
 
-    | usuario |
-    | Pablo López  |
+    | usuario            |
+    | Alex Becerra       |
+
 
 Examples: OUTPUT
 
-    | pagina            | informacion                              |
-    | Sobre Nosotros    | Sobre nosotros..., Misión..., Visión...  |
+    | pagina     | medios de contacto |
+    | Contacto   | formulario         |

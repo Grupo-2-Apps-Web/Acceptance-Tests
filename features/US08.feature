@@ -1,52 +1,36 @@
-Feature: US08 Búsqueda de envíos ordenados
-    Como cliente de empresa logística 
-    quiero poder filtrar mis envíos anteriores mediante criterios de búsqueda 
-    para encontrar la información que necesito
+Feature: US08 Estadísticas de envíos
+    Como cliente de una empresa logística
+    Quiero acceder a estadísticas sobre mis envíos previos
+    Para comprender patrones y tomar decisiones informadas
 
+Scenario: Visualización de envíos por mes
 
-Scenario: Búsqueda por nombre
-
-Given un <cliente> está en el historial de envíos
-And le da a "Filtrar por nombre"
-When ingrese <texto> en la barra de búsqueda
-Then la plataforma muestra una <lista de todos los envios> realizados con la coincidencia de nombre
+    Given que un <cliente> está en el historial de envíos
+    When el <cliente> selecciona <Visualización por mes>
+    Then la plataforma muestra un <gráfico con el número de envíos por mes>
 
 Examples: INPUT
-    | Cliente          | texto  |
-    | Alberto Valverde | #MA251 |
 
+    | usuario            |
+    | Juan Chavez        |
+        
 Examples: OUTPUT
-    | lista de todos los envios                                                                                       |
-    | Viaje #MA251 ID: 1 LOAD DATE:...... LOAD LOCATION:..... VIAJE #MA252 ID: 2 LOAD DATE:..... LOAD LOCATION:.....  |
 
-Scenario: Búsqueda por fecha
+    | Visualización por mes | Gráfico mostrando envíos por mes          |   
 
-Given que un <cliente> está en el historial de envíos
-And le da a "Filtrar por fecha"
-When ingrese la <fecha> en la barra de búsqueda
-Then la plataforma muestra una <lista de todos los envios> realizados en esa fecha
+
+Scenario: Visualización de envíos por destino
+
+    Given que un <cliente> está en el historial de envíos
+    When el <cliente> selecciona <Visualización por destino>
+    Then la plataforma muestra un <gráfico con el número de envíos por destino>
 
 Examples: INPUT
-    | Cliente          |
-    | Alberto Valverde |
+
+    | usuario            |
+    | Juan Chavez        |
 
 Examples: OUTPUT
-    | lista de todos los envios                                                                                       |
-    | Viaje #MA251 ID: 1 LOAD DATE:...... LOAD LOCATION:..... VIAJE #MA252 ID: 2 LOAD DATE:..... LOAD LOCATION:.....  |
 
-
-Scenario: Búsqueda por lugar
-
-Given que un <cliente> está en el historial de envíos
-And le da a "Filtrar por lugar"
-When ingrese el lugar en la barra de búsqueda
-Then la plataforma muestra una <lista de todos los envios> realizados con ese lugar 
-
-Examples: INPUT
-    | Cliente          |
-    | Alberto Valverde |
-
-Examples: OUTPUT
-    | lista de todos los envios                                                                                       |
-    | Viaje #MA251 ID: 1 LOAD DATE:...... LOAD LOCATION:..... VIAJE #MA252 ID: 2 LOAD DATE:..... LOAD LOCATION:.....  |
+    | Visualización por destino | Gráfico mostrando envíos por destino      |
 

@@ -1,20 +1,20 @@
-Feature: Sección de Contacto
+Feature: US26 Modificación de datos de un viaje
+    Como empresario de gestión logística,
+    quiero modificar los datos de un viaje
+    para corregir datos erróneos que fueron registrados.	
 
-Scenario: Visualización de página de Contacto
-
-Given que el <usuario> desea contactar con el área de soporte de la startup
-When ingresa al Landing Page
-And selecciona la sección Contacto
-Then se mostrará la <pagina> de Contacto,
-donde se muestran los <medios de contacto> que el <usuario> puede utilizar para realizar consultas.
+Scenario: Modificar datos de viaje
+    Dado que el <empresario> desea modificar los datos de un viaje en la aplicación
+    Cuando accede a la plataforma y selecciona la sección Registro
+    Y selecciona la opción para modificar un viaje
+    Y ingresa el <ID> del viaje a modificar
+    Y llena los <campos> requeridos de conductor, unidad, carga, entre otros
+    Y da click en “Registrar”
+    Entonces se verificarán los datos ingresados
+    Y registrarán las modificaciones sobre el viaje
 
 Examples: INPUT
 
-    | usuario            |
-    | Alex Becerra       |
+    | empresario                        | ID | campos modificados |
+    | Mario Gonzales Transportes S.A.   | 1  | carga: 500 kg |
 
-
-Examples: OUTPUT
-
-    | pagina     | medios de contacto |
-    | Contacto   | formulario         |

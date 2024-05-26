@@ -1,19 +1,22 @@
-Feature: US23 Sección Acerca De 
+Feature: US23 Sección Características
+    Como usuario
+    quiero ver una página “Características”
+    para conocer las funcionalidades que brinda la aplicación.	
 
-Scenario: Visualización de página Acerca De
+Scenario: Visualización de página Sobre Nosotros
 
-Given que el <usuario> desea conocer sobre el problema que resuelve la aplicación
-When ingresa al Landing Page
-And ingresa a la sección Acerca De
-Then se mostrará la <pagina> Acerca De, 
-donde se muestra la <problematica> que resolverá la aplicación.
+    Given el <usuario> desea conocer sobre la empresa
+    When ingresa al Landing Page
+    And ingresa a la sección Características
+    Then se mostrará la <pagina> Características,
+    se muestra <informacion> sobre las principales funcionalidades que brinda la aplicación
 
 Examples: INPUT
 
-    | usuario |
-    | Raul Granados  |
+    | usuario      |
+    | Angel Perez  |
 
 Examples: OUTPUT
 
-    | pagina            | problematica                                                                                         |
-    | Acerca De         | Clientes de proveedores de servicios de transporte..., Esta falta de transparencia y visibilidad...  |
+    | pagina            | informacion                             |
+    | Características   | Accede a seguimiento en tiempo real...  |
