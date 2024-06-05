@@ -19,7 +19,6 @@ Scenario: Recuperación de cuenta fallida
     Cuando seleccione la opción “¿Olvidó su contraseña?”
     Y realice incorrectamente los pasos indicados para recuperar la cuenta.
     Entonces recibirá una <mensaje indicando el error> por correo
-    Y recuperará el acceso a la cuenta
 
 Examples:
     | cliente   | mensaje indicando el error                 |
